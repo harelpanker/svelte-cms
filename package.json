@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"bits-ui": "^0.15.1"
+		"bits-ui": "^0.15.1",
+		"highlight.js": "^11.9.0"
 	}
 }

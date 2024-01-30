@@ -1,5 +1,13 @@
 <script lang="ts">
+	import 'highlight.js/styles/github-dark.css';
+	import hljs from 'highlight.js/lib/common';
+	import { onMount } from 'svelte';
 	export let data;
+
+	onMount(() => {
+		document.querySelectorAll('pre code')?.forEach((item) => {});
+		hljs.highlightAll();
+	});
 </script>
 
 <svelte:head>
@@ -12,6 +20,6 @@
 			<h1 class="text-3xl font-medium">{data.legal.title}</h1>
 			<p class="text-lg">{data.legal.summery}</p>
 		</div>
-		<div class="prose">{@html data.legal.body.html}</div>
+		<div class="prose prose-pre:p-0">{@html data.legal.body.html}</div>
 	</div>
 </section>
